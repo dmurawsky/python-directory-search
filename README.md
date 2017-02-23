@@ -17,10 +17,10 @@ $ python search.py . 'god' 'divine' 200
 ## Input Usage
 ```shell
 $ python search.py
-Directory to search: test-dir
-First search phrase: god
-Second search phrase: divine
-Max distance between phrases: 200
+__Directory to search:__ test-dir
+__First search phrase:__ god
+__Second search phrase:__ divine
+__Max distance between phrases:__ 200
 ```
 
 ## Test

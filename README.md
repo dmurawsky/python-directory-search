@@ -9,6 +9,10 @@ https://raw.githubusercontent.com/dmurawsky/python-directory-search/master/searc
 ```shell
 $ python search.py test-dir 'god' 'divine' 200
 ```
+OR
+```shell
+$ python search.py . 'god' 'divine' 200
+```
 
 ## Input Usage
 ```shell

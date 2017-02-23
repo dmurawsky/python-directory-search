@@ -33,21 +33,23 @@ class SearchDir():
         files = self.search_all_files()
         for f in files:
             if len(f['results']) > 0:
-                print f['file']+' :'
+                print '\n\n'+f['file']+' :'
                 for r in f['results']:
                     print '\t'+r
+        print '\n'
 
     def search_all_files(self):
-        results = [];
+        files = []
         for fldr in self.get_files_in_dir():
             for f in fldr['files']:
-                files = []
-                path = fldr['dir']+'/'+f
-                d = self.distances_between_strings(path)
-                for i in d:
-                    files.append(self.get_search_text(path,i))
-                results.append({'file':path[self._cwdlen:], 'results':files})
-        return results
+                if f[-4:] == '.txt':
+                    results = []
+                    path = fldr['dir']+'/'+f
+                    d = self.distances_between_strings(path)
+                    for i in d:
+                        results.append(self.get_search_text(path,i))
+                    files.append({'file':path[self._cwdlen:], 'results':results})
+        return files
 
     def search_file_for_string(self, path, str):
         f = open(path)
@@ -84,7 +86,7 @@ class SearchDir():
         return
 if __name__ == "__main__":
     import sys
-    
+
     def get_input():
         directory = raw_input('Directory to search: ')
         first = raw_input('First search phrase: ')

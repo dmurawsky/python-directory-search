@@ -29,3 +29,15 @@ $ git clone https://github.com/dmurawsky/python-directory-search
 $ cd python-directory-search
 $ python tests.py
 ```
+
+## PEP8 Style Check
+```shell
+$ pep8 search.py
+```
+
+## Check Code Coverage
+```shell
+$ pip install coverage
+$ coverage run search.py test-dir 'god' 'divine' 200
+$ coverage report
+```

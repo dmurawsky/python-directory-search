@@ -35,7 +35,7 @@ $ python tests.py
 $ pep8 search.py
 ```
 
-## Check Code Coverage
+## Code Coverage Check
 ```shell
 $ pip install coverage
 $ coverage run search.py test-dir 'god' 'divine' 200
